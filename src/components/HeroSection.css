@@ -7,7 +7,7 @@ img {
 }
 
 .hero-container {
-  background: url('images/home.gif') center center/cover no-repeat;
+  background: url('/baysallar/images/home.gif') center center/cover no-repeat;
   top: 0;
   height: 100vh;
   width: 100%;

@@ -174,7 +174,7 @@
 .address-link {
   background-color: #242424;
   padding: 5px;
-  margin-top: 10px;
+  margin: 10px;
   border:  1px solid white;
   border-radius: 5px;
 }
@@ -202,9 +202,8 @@
 .tel {
   width: 300px;
   color: white;
-  margin-left: 20px;
+  margin: 10px;
   text-align: center;
-
 }
 
 a {
