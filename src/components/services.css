@@ -1,0 +1,40 @@
+.services{
+    background-color: white;
+    padding-bottom: 100px;
+} 
+
+.services > h1 {
+    margin-bottom: 50px;
+}
+.services-container {
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center; 
+    justify-items: center;
+}
+
+.service-item {
+    height: 250px;
+    width: 200px;
+    background-color: rgb(232, 231, 231);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    margin: 10px 30px;
+}
+
+.service-item > i{
+    color: gray;
+    font-size: 130px;
+    padding-bottom: 20px;
+}
+
+.service-item > span{
+    color: gray;
+    font-size: 20px;
+}
