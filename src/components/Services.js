@@ -3,7 +3,7 @@ import './services.css';
 
 export default function Services() {
     return (
-        <div className="services">
+        <div className="services" id="hizmetler">
             <h1>Hizmetlerimiz</h1>
         <div className="services-container">
             <div className="service-item">

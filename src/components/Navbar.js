@@ -64,6 +64,16 @@ function Navbar() {
 
             <li className='nav-item'>
               <a
+                href='#hizmetler'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Hizmetlerimiz
+              </a>
+            </li>
+
+            <li className='nav-item'>
+              <a
                 href='#iletisim'
                 className='nav-links'
                 onClick={closeMobileMenu}

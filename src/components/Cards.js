@@ -12,25 +12,25 @@ function Cards() {
             <CardItem
               src='images/mutfak.jpg'
               text='Mutfak Dolapları'
-              label='Adventure'
+              label='Etiket'
               path='/services'
             />
             <CardItem
               src='images/gardrop.jpg'
               text='Yatak Odası Takımları'
-              label='Luxury'
+              label='Etiket'
               path='/services'
             />
             <CardItem
               src='images/tv.jpg'
               text='TV Ünitesi'
-              label='Mystery'
+              label='Etiket'
               path='/services'
             />
             <CardItem
               src='images/vestiyer.jpg'
               text='Vestiyer'
-              label='Adventure'
+              label='Etiket'
               path='/products'
             />
           </ul>
