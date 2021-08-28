@@ -1,0 +1,65 @@
+.footer-contact {
+    background-color: #242424;
+    padding-top: 30px;
+}
+
+
+.address {
+    color: white;
+    text-align: center;
+    height: 150px;
+    width: 320px;
+    font-weight: lighter;
+    overflow-y: hidden;
+  }
+  .address-wrap{
+    height: 100%;
+  }
+  .address-link {
+    background-color: #242424;
+    padding: 5px;
+    margin: 10px;
+    border:  1px solid white;
+    border-radius: 5px;
+  }
+  
+  .address-link a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .address-link:hover {
+    background-color: white;
+  }
+  
+  .address-link:hover > a {
+    color: #242424;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+  }
+  
+  .tel {
+    width: 300px;
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .contact-container{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

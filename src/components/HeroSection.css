@@ -1,13 +1,9 @@
-img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-}
-
 .hero-container {
-  background: url('/baysallar/images/home.gif') center center/cover no-repeat;
+  /*background: url('/images/home/1.jpg') center center/cover no-repeat;*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-image 1s ease-out;
   top: 0;
   height: 100vh;
   width: 100%;

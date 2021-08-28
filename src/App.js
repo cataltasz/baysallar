@@ -1,22 +1,22 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import './App.css';
-import HeroSection from './components/HeroSection'
-import Cards from './components/Cards'
-import Footer from './components/Footer'
-import Services from './components/Services'
+import Home from './components/pages/home'
+import Products from './components/pages/products'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Contact from './components/pages/contact';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <div className="sections">
-        <HeroSection />
-        <Cards />
-        <Services />
-        <Footer />
-      </div>
-      
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="sections">
+          <Switch>
+            <Route path='/' exact > <Home /> </Route>
+            <Route path='/urunler'> <Products /> </Route>
+            <Route path='/iletisim'> <Contact /> </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

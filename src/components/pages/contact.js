@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '../Navbar';
-import ProductContainer from '../ProductContainer';
 import Footer from '../Footer';
+import ContactContainer from '../ContactContainer';
 
-export default function Products() {
+export default function Contact() {
     return (
         <>
-            <Navbar page="products" />
+            <Navbar page="home" />
             <div>
-                <ProductContainer /> 
+                <ContactContainer /> 
                 <Footer />
             </div>
         </>

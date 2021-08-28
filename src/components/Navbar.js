@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
-  const [bg, setBg] = useState("dark");
-
+  console.log(document.body.scrollTop);
+  const [bg, setBg] = useState((document.body.scrollTop < window.innerHeight - 70 && props.page === "home") ? "transparent" : "black");
+  let initial = props.page === "home" ? "" : "./../";
   const listenScrollEvent = e => {
+    if (props.page !== "home"){
+      setBg("black");
+      return;
+    }
     if (click){
       return;
     }
@@ -29,57 +35,53 @@ function Navbar() {
       setBg("transparent");
     }
   };
-
-
-  window.addEventListener("scroll", listenScrollEvent);
-
-
-
+  useEffect(() => {
+    if (props.page === "home"){
+      window.addEventListener("scroll", listenScrollEvent);
+      setBg("transparent");
+      initial = "";
+    } else {
+      window.removeEventListener("scroll", listenScrollEvent);
+      setBg("black");
+      initial = "./../";
+    }
+  }, [])
+  
   return (
     <>
       <nav className='navbar' style={{background: bg}}>
         <div className={click ? 'navbar-container active' : 'navbar-container'}>
-          <a href='#anasayfa' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to="/" className='navbar-logo' onClick={closeMobileMenu}>
             Baysallar Mobilya
-            <i class='fab fa-typo3' />
-          </a>
+            <i className='fab fa-typo3' />
+          </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <a href='#anasayfa' className='nav-links' onClick={closeMobileMenu}>
+              <Link to="/" className='nav-links' onClick={closeMobileMenu}>
                 Ana Sayfa
-              </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a
-                href='#urunler'
+              <Link
+                to="/urunler"
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Ürünlerimiz
-              </a>
+              </Link>
             </li>
 
             <li className='nav-item'>
-              <a
-                href='#hizmetler'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Hizmetlerimiz
-              </a>
-            </li>
-
-            <li className='nav-item'>
-              <a
-                href='#iletisim'
+              <Link
+                to={initial + "/iletisim"}
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Bize Ulaşın
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

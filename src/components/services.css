@@ -28,13 +28,35 @@
     margin: 10px 30px;
 }
 
-.service-item > i{
+.service-item-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease;
+}
+
+.service-item-wrapper:hover {
+    transform: scale(1.1);
+  }
+
+.service-item:hover {
+    background-color: rgb(216, 211, 211);
+}
+
+.service-item:hover > .service-item-wrapper {
+    transform: scale(1.1);
+}
+
+.service-item-wrapper > i{
     color: gray;
-    font-size: 130px;
+    font-size: 110px;
     padding-bottom: 20px;
 }
 
-.service-item > span{
+.service-item-wrapper > span{
     color: gray;
     font-size: 20px;
 }
