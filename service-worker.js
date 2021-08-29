@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/baysallar/precache-manifest.3ba1cbc55f8f8bf1440515fd4390700c.js"
+  "/baysallar/precache-manifest.612837b22dd3a2d68aac0bd661518612.js"
 );
 
 self.addEventListener('message', (event) => {
