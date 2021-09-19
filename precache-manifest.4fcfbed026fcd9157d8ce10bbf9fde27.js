@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cdbba575cf72bba30dc2ae65c7e6b74b",
+    "revision": "596fde2e9120dcbf3b7cc266221049d2",
     "url": "/baysallar/index.html"
   },
   {
-    "revision": "a3cb3faf8ad8588e59fd",
-    "url": "/baysallar/static/css/main.0a1b81a7.chunk.css"
+    "revision": "d13e2910fe22aefa5027",
+    "url": "/baysallar/static/css/main.9b01075f.chunk.css"
   },
   {
     "revision": "42a6a4cd687242663744",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baysallar/static/js/2.cf31f2c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3cb3faf8ad8588e59fd",
-    "url": "/baysallar/static/js/main.3185be73.chunk.js"
+    "revision": "d13e2910fe22aefa5027",
+    "url": "/baysallar/static/js/main.ce331069.chunk.js"
   },
   {
     "revision": "9bed5a175cf10aa3a93f",
