@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/baysallar/static/css/main.9b01075f.chunk.css",
-    "main.js": "/baysallar/static/js/main.ce331069.chunk.js",
-    "main.js.map": "/baysallar/static/js/main.ce331069.chunk.js.map",
+    "main.css": "/baysallar/static/css/main.3c225525.chunk.css",
+    "main.js": "/baysallar/static/js/main.668291d1.chunk.js",
+    "main.js.map": "/baysallar/static/js/main.668291d1.chunk.js.map",
     "runtime-main.js": "/baysallar/static/js/runtime-main.53a69c99.js",
     "runtime-main.js.map": "/baysallar/static/js/runtime-main.53a69c99.js.map",
     "static/js/2.cf31f2c6.chunk.js": "/baysallar/static/js/2.cf31f2c6.chunk.js",
     "static/js/2.cf31f2c6.chunk.js.map": "/baysallar/static/js/2.cf31f2c6.chunk.js.map",
     "index.html": "/baysallar/index.html",
-    "precache-manifest.4fcfbed026fcd9157d8ce10bbf9fde27.js": "/baysallar/precache-manifest.4fcfbed026fcd9157d8ce10bbf9fde27.js",
+    "precache-manifest.4629e06f00524bbed28ea5bf3c410431.js": "/baysallar/precache-manifest.4629e06f00524bbed28ea5bf3c410431.js",
     "service-worker.js": "/baysallar/service-worker.js",
-    "static/css/main.9b01075f.chunk.css.map": "/baysallar/static/css/main.9b01075f.chunk.css.map",
+    "static/css/main.3c225525.chunk.css.map": "/baysallar/static/css/main.3c225525.chunk.css.map",
     "static/js/2.cf31f2c6.chunk.js.LICENSE.txt": "/baysallar/static/js/2.cf31f2c6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.53a69c99.js",
     "static/js/2.cf31f2c6.chunk.js",
-    "static/css/main.9b01075f.chunk.css",
-    "static/js/main.ce331069.chunk.js"
+    "static/css/main.3c225525.chunk.css",
+    "static/js/main.668291d1.chunk.js"
   ]
 }
