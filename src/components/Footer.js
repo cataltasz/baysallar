@@ -5,45 +5,48 @@ function Footer() {
   return (
     <div className='footer-container' id="iletisim">
 
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <a href='#anasayfa' className='social-logo'>
+      <section className='social-media'>
+        <div className='social-media-wrap'>
+          <div className='footer-logo'>
+            <a href='/' className='social-logo'>
               Baysallar Mobilya
-              <i class='fab fa-typo3' />
             </a>
           </div>
-          <small class='website-rights'>Baysallar Mobilya © 2021</small>
-          <div class='social-icons'>
+          <small className='website-rights'>Baysallar Mobilya © 2021</small>
+          <div className='social-icons'>
             <a
-              class='social-icon-link facebook'
-              href='https://wa.me/905423831876'
+              className='social-icon-link facebook'
+              href='https://wa.me/905321758512'
               aria-label='WhatsApp'
+              target='_blank'
+              rel="noopener noreferrer"
             >
-              <i class='fab fa-whatsapp' />
+              <i className='fab fa-whatsapp' />
             </a>
             <a
-              class='social-icon-link facebook'
+              className='social-icon-link facebook'
               href='https://www.facebook.com/Baysallar-Mobilya-1413134405628504/'
               target='_blank'
+              rel="noopener noreferrer"
               aria-label='Facebook'
             >
-              <i class='fab fa-facebook-f' />
+              <i className='fab fa-facebook-f' />
             </a>
             <a
-              class='social-icon-link instagram'
-              to='/'
+              className='social-icon-link instagram'
+              href='https://instagram.com/baysallarmobilya42'
               target='_blank'
+              rel="noopener noreferrer"
               aria-label='Instagram'
             >
-              <i class='fab fa-instagram' />
+              <i className='fab fa-instagram' />
             </a>
             <a
-              class='social-icon-link email'
-              href='mailto:baysallarmobilya@gmail.com'
+              className='social-icon-link email'
+              href='mailto:baysallar_mobilya@hotmail.com'
               aria-label='Email'
             >
-              <i class='fa fa-envelope' />
+              <i className='fa fa-envelope' />
             </a>
           </div>
         </div>

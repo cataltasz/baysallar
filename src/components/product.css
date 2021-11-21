@@ -34,6 +34,7 @@
     text-align: center;
     cursor: pointer;
     font-size: 20px;
+    font-weight: 500;
 }
 
 .type:hover {
@@ -42,6 +43,26 @@
 
 .type.selected {
     color: #ddd;
-    background-color: black;
+    /*background-color: black;*/
+    background-color: #6d031e;
 }
 
+.slider-container {
+    min-height: calc(100vh - 200px);
+    padding-top: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+.btn-sm {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 960px) {
+    .slider-container {
+        width: 95%;
+    }
+}

@@ -2,12 +2,14 @@
   "name": "baysallar-v1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cataltasz.github.io/baysallar",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^5.1.0",
+    "cloudinary": "^1.26.3",
+    "cloudinary-core": "^2.11.4",
+    "cloudinary-react": "^1.7.0",
     "gh-pages": "^3.2.3",
     "photoswipe": "^4.1.3",
     "react": "^16.13.1",
@@ -15,12 +17,14 @@
     "react-dom": "^16.13.1",
     "react-facebook-photo-grid": "^1.0.10",
     "react-grid-gallery": "^0.5.5",
+    "react-icons": "^4.3.1",
     "react-images": "^1.2.0-beta.7",
     "react-photo-gallery": "^8.0.0",
     "react-photoswipe-gallery": "^1.3.6",
     "react-responsive-image-grid": "^1.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-spinners": "^0.11.0"
   },
   "scripts": {
     "start": "react-scripts start",

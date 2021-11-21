@@ -1,5 +1,6 @@
 .cards {
   padding: 30px;
+  padding-top: 50px;
   background: #fff;
 }
 
@@ -34,6 +35,7 @@ h1 {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 300px;
+  height: 300px;
   margin-bottom: 10px;
 }
 
@@ -56,25 +58,6 @@ h1 {
   overflow: hidden;
 }
 
-.fade-img {
-  animation-name: fade-img;
-  animation-duration: 2s;
-}
-
-.cards__item__pic-wrap::after {
-  content: attr(data-category);
-  position: absolute;
-  bottom: 0;
-  margin-left: 10px;
-  padding: 6px 8px;
-  max-width: calc((100%) - 60px);
-  font-size: 12px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #1f98f4;
-  box-sizing: border-box;
-}
-
 .cards__item__img {
   position: absolute;
   top: 0;
@@ -90,17 +73,22 @@ h1 {
   transition: all 0.2s linear;
 }
 
-.cards__item__img:hover {
+.cards__item__link:hover > img {
   transform: scale(1.2);
 }
 
 .cards__item__info {
-  padding: 20px 30px 30px;
+  position: absolute;
+  bottom: 0;
+  padding: 40px 30px 20px 30px;
   text-align: center;
+  width: 100%;
+
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.946), rgba(0, 0, 0, 0.00));
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #fafafa;
   font-size: 18px;
   line-height: 24px;
 }
@@ -120,5 +108,17 @@ h1 {
 @media only screen and (max-width: 1024px) {
   .cards__item {
     margin-bottom: 2rem;
+  }
+  .cards__wrapper, .cards__item,  .cards__items{
+    
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .cards__container {
+    width: 100%;
+  }
+  .cards{
+    padding-left: 0;
+    padding-right: 0;
   }
 }

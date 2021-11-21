@@ -6,9 +6,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Contact from './components/pages/contact';
 
 function App() {
+
   return (
     <div className="App">
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div className="sections">
           <Switch>
             <Route path='/' exact > <Home /> </Route>
