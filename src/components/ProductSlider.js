@@ -25,10 +25,10 @@ export default function ProductSlider({ imgs, categoryName }) {
     setViewerIsOpen(true);
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     resetZoom();
     setViewerIsOpen(false);
-  };
+  }, [resetZoom]);
 
   const nextImage = useCallback(() => {
     resetZoom();
@@ -125,7 +125,7 @@ export default function ProductSlider({ imgs, categoryName }) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [viewerIsOpen, nextImage, prevImage, resetZoom]);
+  }, [viewerIsOpen, nextImage, prevImage, resetZoom, closeLightbox]);
 
   // Lock scroll when lightbox is open
   useEffect(() => {

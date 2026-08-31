@@ -8,10 +8,11 @@ import FooterContact from '../FooterContact';
 import Footer from '../Footer';
 
 function Home() {
+  const publicUrl = process.env.PUBLIC_URL || '';
   const heroImages = [
-    '/images/home/1.jpg',
-    '/images/home/2.jpg',
-    '/images/home/3.jpg'
+    publicUrl + '/images/home/1.jpg',
+    publicUrl + '/images/home/2.jpg',
+    publicUrl + '/images/home/3.jpg'
   ];
 
   return (

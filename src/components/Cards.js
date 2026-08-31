@@ -3,44 +3,45 @@ import './Cards.css';
 import CardItem from './CardItem';
 
 function Cards() {
+  const publicUrl = process.env.PUBLIC_URL || '';
   const categories = [
     {
-      src: '/images/mutfak.jpg',
+      src: publicUrl + '/images/mutfak.jpg',
       title: 'Mutfak Dolapları',
       description: 'Akrilik, lake, membran ve masif kapaklı modern & ergonomik mutfak çözümleri.',
       badge: 'Popüler',
       path: '/urunler'
     },
     {
-      src: '/images/gardrop.jpg',
+      src: publicUrl + '/images/gardrop.jpg',
       title: 'Yatak Odası Takımları',
       description: 'Geniş depolama alanlı sürgülü/kapaklı gardıroplar, şifonyer ve özel ölçü karyolalar.',
       badge: 'Özel Ölçü',
       path: '/urunler'
     },
     {
-      src: '/images/tv.jpg',
+      src: publicUrl + '/images/tv.jpg',
       title: 'TV Ünitesi & Duvar Panelleri',
       description: 'Salonunuza şıklık katan modern LED aydınlatmalı ve ahşap çıtalı TV üniteleri.',
       badge: 'Modern',
       path: '/urunler'
     },
     {
-      src: '/images/vestiyer.jpg',
+      src: publicUrl + '/images/vestiyer.jpg',
       title: 'Vestiyer & Portmanto',
       description: 'Antre ve koridorlarınıza tam uyumlu, bol raflı ve aynalı fonksiyonel vestiyerler.',
       badge: 'Kullanışlı',
       path: '/urunler'
     },
     {
-      src: '/images/daha.jpg',
+      src: publicUrl + '/images/daha.jpg',
       title: 'Banyo & Lavabo Dolapları',
       description: 'Suya ve neme dayanıklı lake & ahşap banyo dolabı ve çamaşır makinesi kabinleri.',
       badge: 'Dayanıklı',
       path: '/urunler'
     },
     {
-      src: '/images/d.jpg',
+      src: publicUrl + '/images/d.jpg',
       title: 'Sedir, Şark Köşesi & Özel Projeler',
       description: 'Geleneksel şark köşesi sedirleri, ofis mobilyaları, giyinme odaları ve kapı imalatı.',
       badge: 'Kişiye Özel',

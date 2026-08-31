@@ -3,50 +3,52 @@ import ProductSlider from './ProductSlider';
 import './product.css';
 import { fetchPhotos } from './util/CloudinaryService';
 
+const pubUrl = process.env.PUBLIC_URL || '';
+
 // Curated high quality gallery fallback images for each category
 const DEFAULT_CATEGORY_IMAGES = {
   mutfak: [
-    { src: '/images/mutfak.jpg', title: 'Modern Ada Mutfak & Akrilik Dolaplar' },
-    { src: '/images/home/1.jpg', title: 'Lake Boyalı Beyaz Klasik Mutfak' },
-    { src: '/images/home/2.jpg', title: 'Ahşap Dokulu Antrasit Kulpsuz Mutfak' },
-    { src: '/images/home/3.jpg', title: 'Doğal Ahşap & Mermer Tezgahlı Mutfak' },
-    { src: '/images/daha.jpg', title: 'Kompakt Özel Ölçü Mutfak Tasarımı' }
+    { src: pubUrl + '/images/mutfak.jpg', title: 'Modern Ada Mutfak & Akrilik Dolaplar' },
+    { src: pubUrl + '/images/home/1.jpg', title: 'Lake Boyalı Beyaz Klasik Mutfak' },
+    { src: pubUrl + '/images/home/2.jpg', title: 'Ahşap Dokulu Antrasit Kulpsuz Mutfak' },
+    { src: pubUrl + '/images/home/3.jpg', title: 'Doğal Ahşap & Mermer Tezgahlı Mutfak' },
+    { src: pubUrl + '/images/daha.jpg', title: 'Kompakt Özel Ölçü Mutfak Tasarımı' }
   ],
   sedir: [
-    { src: '/images/d.jpg', title: 'Geleneksel Şark Köşesi Ahşap Sedir' },
-    { src: '/images/daha.jpg', title: 'Modern Minderli Sandıklı Sedir Takımı' },
-    { src: '/images/home/2.jpg', title: 'Balkon & Teras İçin Masif Ahşap Sedir' }
+    { src: pubUrl + '/images/d.jpg', title: 'Geleneksel Şark Köşesi Ahşap Sedir' },
+    { src: pubUrl + '/images/daha.jpg', title: 'Modern Minderli Sandıklı Sedir Takımı' },
+    { src: pubUrl + '/images/home/2.jpg', title: 'Balkon & Teras İçin Masif Ahşap Sedir' }
   ],
   yatak: [
-    { src: '/images/gardrop.jpg', title: 'Aynalı Sürgülü Gardırop & Yatak Odası' },
-    { src: '/images/home/3.jpg', title: 'Aydınlatmalı Cam Kapaklı Giyinme Dolabı' },
-    { src: '/images/daha.jpg', title: 'Özel Ölçü Karyola Başlığı & Komodin' },
-    { src: '/images/home/1.jpg', title: 'Modern Şifonyer & Makyaj Masası' }
+    { src: pubUrl + '/images/gardrop.jpg', title: 'Aynalı Sürgülü Gardırop & Yatak Odası' },
+    { src: pubUrl + '/images/home/3.jpg', title: 'Aydınlatmalı Cam Kapaklı Giyinme Dolabı' },
+    { src: pubUrl + '/images/daha.jpg', title: 'Özel Ölçü Karyola Başlığı & Komodin' },
+    { src: pubUrl + '/images/home/1.jpg', title: 'Modern Şifonyer & Makyaj Masası' }
   ],
   genc: [
-    { src: '/images/home/2.jpg', title: 'Çalışma Masalı Fonksiyonel Genç Odası' },
-    { src: '/images/gardrop.jpg', title: 'Ranzalı & Bol Dolaplı Çocuk Odası' },
-    { src: '/images/home/1.jpg', title: 'Kitaplıklı Genç Çalışma Ünitesi' }
+    { src: pubUrl + '/images/home/2.jpg', title: 'Çalışma Masalı Fonksiyonel Genç Odası' },
+    { src: pubUrl + '/images/gardrop.jpg', title: 'Ranzalı & Bol Dolaplı Çocuk Odası' },
+    { src: pubUrl + '/images/home/1.jpg', title: 'Kitaplıklı Genç Çalışma Ünitesi' }
   ],
   vestiyer: [
-    { src: '/images/vestiyer.jpg', title: 'Aynalı & Gizli LED Işıklı Portmanto' },
-    { src: '/images/daha.jpg', title: 'Gömme Giriş Vestiyer & Ayakkabılık' },
-    { src: '/images/home/3.jpg', title: 'Oturma Alanlı Modern Koridor Dolabı' }
+    { src: pubUrl + '/images/vestiyer.jpg', title: 'Aynalı & Gizli LED Işıklı Portmanto' },
+    { src: pubUrl + '/images/daha.jpg', title: 'Gömme Giriş Vestiyer & Ayakkabılık' },
+    { src: pubUrl + '/images/home/3.jpg', title: 'Oturma Alanlı Modern Koridor Dolabı' }
   ],
   banyo: [
-    { src: '/images/daha.jpg', title: 'Asma Lavabo Dolabı & Aynalı Dolap' },
-    { src: '/images/home/1.jpg', title: 'Çamaşır Makinesi Gizleme Dolabı' },
-    { src: '/images/mutfak.jpg', title: 'Suya Dayanıklı Lake Banyo Mobilyası' }
+    { src: pubUrl + '/images/daha.jpg', title: 'Asma Lavabo Dolabı & Aynalı Dolap' },
+    { src: pubUrl + '/images/home/1.jpg', title: 'Çamaşır Makinesi Gizleme Dolabı' },
+    { src: pubUrl + '/images/mutfak.jpg', title: 'Suya Dayanıklı Lake Banyo Mobilyası' }
   ],
   tv: [
-    { src: '/images/tv.jpg', title: 'Ahşap Çıtalı LED Işıklı TV Ünitesi' },
-    { src: '/images/home/2.jpg', title: 'Mermer Desenli & Raflı Duvar Paneli' },
-    { src: '/images/home/3.jpg', title: 'Geniş Çekmeceli Modern TV Konsolu' }
+    { src: pubUrl + '/images/tv.jpg', title: 'Ahşap Çıtalı LED Işıklı TV Ünitesi' },
+    { src: pubUrl + '/images/home/2.jpg', title: 'Mermer Desenli & Raflı Duvar Paneli' },
+    { src: pubUrl + '/images/home/3.jpg', title: 'Geniş Çekmeceli Modern TV Konsolu' }
   ],
   diger: [
-    { src: '/images/d.jpg', title: 'Kişiye Özel Ahşap İç Oda Kapıları' },
-    { src: '/images/mutfak.jpg', title: 'Ofis Çalışma Masası & Dosya Dolabı' },
-    { src: '/images/gardrop.jpg', title: 'Özel Ölçü Kiler & Depolama Dolabı' }
+    { src: pubUrl + '/images/d.jpg', title: 'Kişiye Özel Ahşap İç Oda Kapıları' },
+    { src: pubUrl + '/images/mutfak.jpg', title: 'Ofis Çalışma Masası & Dosya Dolabı' },
+    { src: pubUrl + '/images/gardrop.jpg', title: 'Özel Ölçü Kiler & Depolama Dolabı' }
   ]
 };
 

@@ -11,7 +11,7 @@ export default function AboutSection() {
           <div className="about-visual">
             <div className="about-image-wrapper">
               <img 
-                src="/images/mutfak.jpg" 
+                src={process.env.PUBLIC_URL + "/images/mutfak.jpg"} 
                 alt="Baysallar Mobilya Atölye ve İmalat" 
                 className="about-main-img"
               />
