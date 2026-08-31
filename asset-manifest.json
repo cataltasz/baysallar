@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/baysallar/static/css/main.26397206.chunk.css",
-    "main.js": "/baysallar/static/js/main.c8fb0cc8.chunk.js",
-    "main.js.map": "/baysallar/static/js/main.c8fb0cc8.chunk.js.map",
+    "main.css": "/baysallar/static/css/main.085ef96d.chunk.css",
+    "main.js": "/baysallar/static/js/main.6ee83eb5.chunk.js",
+    "main.js.map": "/baysallar/static/js/main.6ee83eb5.chunk.js.map",
     "runtime-main.js": "/baysallar/static/js/runtime-main.53a69c99.js",
     "runtime-main.js.map": "/baysallar/static/js/runtime-main.53a69c99.js.map",
-    "static/js/2.cf31f2c6.chunk.js": "/baysallar/static/js/2.cf31f2c6.chunk.js",
-    "static/js/2.cf31f2c6.chunk.js.map": "/baysallar/static/js/2.cf31f2c6.chunk.js.map",
+    "static/js/2.211447e6.chunk.js": "/baysallar/static/js/2.211447e6.chunk.js",
+    "static/js/2.211447e6.chunk.js.map": "/baysallar/static/js/2.211447e6.chunk.js.map",
     "index.html": "/baysallar/index.html",
-    "precache-manifest.db6c359b3e553d433733c3f81745a55d.js": "/baysallar/precache-manifest.db6c359b3e553d433733c3f81745a55d.js",
+    "precache-manifest.33b8b621fce8af5135187ff193afee60.js": "/baysallar/precache-manifest.33b8b621fce8af5135187ff193afee60.js",
     "service-worker.js": "/baysallar/service-worker.js",
-    "static/css/main.26397206.chunk.css.map": "/baysallar/static/css/main.26397206.chunk.css.map",
-    "static/js/2.cf31f2c6.chunk.js.LICENSE.txt": "/baysallar/static/js/2.cf31f2c6.chunk.js.LICENSE.txt"
+    "static/css/main.085ef96d.chunk.css.map": "/baysallar/static/css/main.085ef96d.chunk.css.map",
+    "static/js/2.211447e6.chunk.js.LICENSE.txt": "/baysallar/static/js/2.211447e6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.53a69c99.js",
-    "static/js/2.cf31f2c6.chunk.js",
-    "static/css/main.26397206.chunk.css",
-    "static/js/main.c8fb0cc8.chunk.js"
+    "static/js/2.211447e6.chunk.js",
+    "static/css/main.085ef96d.chunk.css",
+    "static/js/main.6ee83eb5.chunk.js"
   ]
 }
