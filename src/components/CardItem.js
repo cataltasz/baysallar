@@ -1,23 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-function CardItem(props) {
+function CardItem({ src, title, description, badge, path }) {
   return (
-    <>
-      <li className='cards__item'>
-        <Link className='cards__item__link' to={props.path}>
+    <div className="category-card">
+      <Link className="category-card-link" to={path || '/urunler'}>
+        <div className="category-card-image-wrap">
           <img
-              className='cards__item__img'
-              alt='Ürün'
-              src={props.src}
-            />
-          <div className='cards__item__info'>
-            <h5 className='cards__item__text'>{props.text}</h5>
+            className="category-card-img"
+            alt={title || 'Baysallar Mobilya Ürün'}
+            src={src}
+            loading="lazy"
+          />
+          <div className="category-card-overlay" />
+          {badge && <span className="category-card-badge">{badge}</span>}
+        </div>
+
+        <div className="category-card-content">
+          <div className="category-card-header">
+            <h3 className="category-card-title">{title}</h3>
+            <span className="category-card-arrow">
+              <i className="fa-solid fa-arrow-right"></i>
+            </span>
           </div>
-        </Link>
-      </li>
-    </>
+          {description && <p className="category-card-desc">{description}</p>}
+          <span className="category-card-action">Modelleri İncele</span>
+        </div>
+      </Link>
+    </div>
   );
 }
 

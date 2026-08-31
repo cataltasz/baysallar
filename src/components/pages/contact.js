@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../Navbar';
-import Footer from '../Footer';
 import ContactContainer from '../ContactContainer';
+import Footer from '../Footer';
 
 export default function Contact() {
-    return (
-        <>
-            <Navbar page="home" />
-            <div>
-                <ContactContainer /> 
-                <Footer />
-            </div>
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <main>
+        <ContactContainer />
+      </main>
+      <Footer />
+    </>
+  );
 }

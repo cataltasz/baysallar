@@ -1,58 +1,107 @@
-import React from 'react';
-import '../App.css';
-import { Button } from './Button';
+import React, { useState, useEffect } from 'react';
+import Button from './Button';
 import './HeroSection.css';
-import {useState,useEffect} from 'react';
 
-function HeroSection(props) {
+function HeroSection({ imgs }) {
+  const imagesList = imgs && imgs.length > 0 
+    ? imgs 
+    : ['/images/home/1.jpg', '/images/home/2.jpg', '/images/home/3.jpg'];
 
-  const [img, setImg] = useState(props.imgs[0])
-  let n = 1;
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    startAnimation();
-  }, []);
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % imagesList.length);
+    }, 6000);
 
-  const startAnimation = () => {
+    return () => clearInterval(timer);
+  }, [imagesList.length]);
 
-    const interval = setInterval(() => {
-      setImg(props.imgs[n % props.imgs.length]);
-      n += 1;
-    }, 7000);
-    
-    return () => clearInterval(interval);
-  };
+  const whatsappMessage = encodeURIComponent('Merhaba Baysallar Mobilya, özel mobilya tasarımı ve fiyat teklifi almak istiyorum.');
 
   return (
-    <div className='hero-container' id="anasayfa" style={{backgroundImage: "url("+img+")"}}>
-      {
-        props.imgs.map(i => (
-          <img src={i} className="invisible"/> 
-        ))
-      }
-      <div className='overlay'> </div>
-      <h1 className='over'>Baysallar Mobilya</h1>
-      <p className='over'>Evinizi birlikte oluşturalım!</p>
-      <br/><span className="over" style={{fontSize:"18px",color:"white"}}> Her çeşit mobilya ihtiyacınız itina ile evinize uygun ölçülerle hazırlanır. </span>
-      <div className='over hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          href="/urunler"
-        >
-          Ürün Çeşitleri
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          href="/iletisim"
-        >
-          Bize Ulaşın
-        </Button>
+    <section className="hero-section" id="anasayfa">
+      {/* Background Slideshow with Cross-Fade */}
+      <div className="hero-bg-wrapper">
+        {imagesList.map((imgSrc, idx) => (
+          <div
+            key={imgSrc + idx}
+            className={`hero-bg-slide ${idx === currentIndex ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${imgSrc})` }}
+            aria-hidden="true"
+          />
+        ))}
       </div>
-    </div>
+
+      {/* Dark Vignette Overlay */}
+      <div className="hero-overlay" />
+
+      {/* Hero Content */}
+      <div className="hero-content container">
+        <div className="hero-badge">
+          <i className="fa-solid fa-medal"></i>
+          <span>Konya Karatay Sanayi • 30+ Yıllık Tecrübe</span>
+        </div>
+
+        <h1 className="hero-title">
+          Hayalinizdeki Yaşam Alanlarını <span className="hero-highlight">Birlikte Tasarlayalım</span>
+        </h1>
+
+        <p className="hero-description">
+          Mutfak dolaplarından yatak odalarına, vestiyerden TV ünitelerine kadar evinize özel ölçülerle, birinci sınıf malzeme ve kusursuz işçilikle üretiyoruz.
+        </p>
+
+        {/* Feature Pills */}
+        <div className="hero-features">
+          <div className="hero-feature-item">
+            <i className="fa-solid fa-ruler-combined"></i>
+            <span>Ücretsiz Keşif & 3D Çizim</span>
+          </div>
+          <div className="hero-feature-item">
+            <i className="fa-solid fa-tree"></i>
+            <span>1. Sınıf MDF & Masif</span>
+          </div>
+          <div className="hero-feature-item">
+            <i className="fa-solid fa-truck-fast"></i>
+            <span>Ücretsiz Montaj & Teslimat</span>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="hero-cta-group">
+          <Button
+            buttonStyle="btn--accent"
+            buttonSize="btn--large"
+            href="/urunler"
+            icon={<i className="fa-solid fa-couch"></i>}
+          >
+            Ürün Çeşitlerimizi Keşfet
+          </Button>
+
+          <Button
+            buttonStyle="btn--outline"
+            buttonSize="btn--large"
+            href={`https://wa.me/905321758512?text=${whatsappMessage}`}
+            target="_blank"
+            icon={<i className="fa-brands fa-whatsapp"></i>}
+          >
+            WhatsApp'tan Teklif Al
+          </Button>
+        </div>
+
+        {/* Slider Navigation Dots */}
+        <div className="hero-dots">
+          {imagesList.map((_, idx) => (
+            <button
+              key={idx}
+              className={`hero-dot ${idx === currentIndex ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(idx)}
+              aria-label={`Slayt ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
